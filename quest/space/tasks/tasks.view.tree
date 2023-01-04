@@ -14,7 +14,7 @@ $zub_quest_space_tasks $mol_page
 			<= Task*0 $mol_view sub /
 				<= Task_title* $mol_string_button
 					hint @ \Type title
-					value? <=> task_title*?
+					value? <=> task_title*? \
 				<= Task_done* $mol_check_box
 					title \
 					checked? <=> task_done*? false

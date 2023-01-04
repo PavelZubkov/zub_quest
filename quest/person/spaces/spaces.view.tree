@@ -14,5 +14,5 @@ $zub_quest_person_spaces $mol_page
 					arg * space <= space_id* \
 					title <= space_title* @ \Unnamed
 				<= Space_drop* $mol_button_minor
-					click? <=> space_drop*?
+					click <= space_drop*
 					sub / <= Space_drop_icon* $mol_icon_delete
