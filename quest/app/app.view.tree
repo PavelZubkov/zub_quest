@@ -1,0 +1,11 @@
+$zub_quest_app $mol_book2
+	yard $hyoo_sync_client
+	user $zub_quest_person
+	pages /
+		<= Spaces $zub_quest_person_spaces
+			person <= user
+			foot /
+				<= Online $hyoo_sync_online
+					yard <= yard
+		<= Tasks $zub_quest_space_tasks
+			space <= space $zub_quest_space

@@ -1,0 +1,32 @@
+$zub_quest_space_tasks $mol_page
+	space $zub_quest_space
+		title? => space_title?
+		task_add => task_add
+		task_drop* => task_drop*
+	Title $mol_string_button
+		value? <=> space_title?
+	tools /
+		<= Task_add $mol_button_major
+			click <= task_add
+			sub / <= Task_add_icon $mol_icon_plus
+	body /
+		<= Task_list $mol_list rows <= task_list /
+			<= Task*0 $mol_view sub /
+				<= Task_title* $mol_string_button
+					hint @ \Type title
+					value? <=> task_title*?
+				<= Task_done* $mol_check_box
+					title \
+					checked? <=> task_done*? false
+				<= Task_drop* $mol_button_minor
+					click <= task_drop*
+					sub / <= Task_drop_icon* $mol_icon_cross
+	foot /
+		<= Filter $mol_switch
+			value? <=> filter? \
+			options *
+				\
+					@ \All
+				false @ \New
+				true @ \Done
+
