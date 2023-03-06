@@ -2759,7 +2759,7 @@ var $;
 //hyoo/hyoo.ts
 ;
 "use strict";
-let $hyoo_sync_revision = "a0ca8ec";
+let $hyoo_sync_revision = "6f92ff4";
 //hyoo/sync/-meta.tree/revision.meta.tree.ts
 ;
 "use strict";
