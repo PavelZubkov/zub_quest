@@ -1964,7 +1964,7 @@ declare namespace $ {
     class $mol_fetch_response extends $mol_object2 {
         readonly native: Response;
         constructor(native: Response);
-        status(): "success" | "unknown" | "inform" | "redirect" | "wrong" | "failed";
+        status(): "unknown" | "success" | "inform" | "redirect" | "wrong" | "failed";
         code(): number;
         message(): string;
         headers(): Headers;
@@ -1994,8 +1994,8 @@ declare namespace $ {
 }
 
 declare namespace $ {
-    function $mol_huggingface_run(this: $, space: string, method: string | number, ...data: readonly any[]): readonly string[];
-    function $mol_huggingface_async(space: string, method: number, ...data: readonly any[]): Promise<[string]> & {
+    function $mol_huggingface_run(this: $, space: string, method: string | number, ...data: readonly any[]): any[] | readonly string[];
+    function $mol_huggingface_async(space: string, method: number, ...data: readonly any[]): Promise<any[]> & {
         destructor: () => void;
     };
 }
@@ -2013,7 +2013,7 @@ declare namespace $ {
         static lang(next?: string): string;
         static source(lang: string): any;
         static texts(lang: string, next?: $mol_locale_dict): $mol_locale_dict;
-        static text(key: string): {} | null;
+        static text(key: string): string;
         static warn(key: string): null;
     }
 }
@@ -2283,13 +2283,13 @@ declare namespace $ {
         space_add(): $zub_quest_space;
         space_drop(id: any): void;
         person(): $zub_quest_person;
-        title(): {} | null;
+        title(): string;
         tools(): readonly any[];
         body(): readonly any[];
         Space_add_icon(): $mol_icon_plus;
         Space_add(): $mol_button_major;
         space_id(id: any): string;
-        space_title(id: any): {} | null;
+        space_title(id: any): string;
         Space_link(id: any): $$.$mol_link;
         Space_drop_icon(id: any): $mol_icon_delete;
         Space_drop(id: any): $mol_button_minor;
@@ -2303,7 +2303,7 @@ declare namespace $.$$ {
     class $zub_quest_person_spaces extends $.$zub_quest_person_spaces {
         space_list(): $mol_view[];
         space_id(obj: $zub_quest_space): `${string}_${string}`;
-        space_title(obj: $zub_quest_space): {} | null;
+        space_title(obj: $zub_quest_space): string;
     }
 }
 
