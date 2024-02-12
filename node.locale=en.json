@@ -6,8 +6,5 @@
 	"$mol_select_no_options_message": "No options",
 	"$zub_quest_person_spaces_space_title": "Unnamed",
 	"$zub_quest_person_spaces_title": "Spaces",
-	"$zub_quest_space_tasks_Filter_options_": "All",
-	"$zub_quest_space_tasks_Filter_options_false": "New",
-	"$zub_quest_space_tasks_Filter_options_true": "Done",
 	"$zub_quest_space_tasks_Task_title_hint": "Type title"
 }
