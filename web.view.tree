@@ -351,7 +351,7 @@ $hyoo_sync_online $mol_select
 
 $mol_page $mol_view
 	dom_name \article
-	field *
+	attr *
 		^
 		tabIndex <= tabindex -1
 	sub /
